@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- All min css -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <!-- Style css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<style>
+  .btn-1{
+    background-color: #ee332b;
+    color: white;
+    padding: 15px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+  }
+  .chat{
+    position: fixed;
+    right: 0;
+    top: 60%;
+  }
+  .flex{
+    display:flex ;
+  }
+  .overflow{
+  overflow-y: scroll;
+  height: 70%;
+  }
+  .p-0{
+    padding: 0px;
+  }
+  .p-5{
+    padding: 1.5rem;
+  }
+  .p-3{
+    padding: 0.75rem;
+  }
+  .px-3{
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+  .side_bar .button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 20px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    transition: var(--transition);
+  }
+  .send{
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    line-height: 30px;
+    border-radius: 7px;
+  }
+  .side_bar input {
+    position: absolute;
+    bottom: 5px;
+    left: 2%;
+    right: 5%;
+    width: 70%;
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+    border-radius: 7px;
+  }
+  .text-white{
+    color: white;
+  }
+  .msg{
+    position: absolute;
+    bottom: -10px;
+    width: 100%;
+    height: 50px;
+    line-height: 40px;
+    background-color: #0e0e0e;
+  }
+  .chat-msg{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 0.25rem;
+    color: white;
+    width: 80%;
+  }
+  .receiver{
+    margin-top: 1rem;
+    border-top-right-radius: 10px;
+    background-color: #ee332b;
+    margin-bottom: 1rem;
+  }
+  .sender{
+    margin-top: 1rem;
+    position: relative;
+    border-top-left-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    right: -7%;
+    margin-bottom: 1rem;
+  }
+  .fs-20{
+    font-size: 20px;
+  }
+  .mr-1{
+    margin-right: 5px;
+  }
+  .receiver-avator{
+    right: 0%;
+    background-color: #ee332b;
+    height: fit-content;
+    padding-right: 5px;
+    padding-left: 5px;
+    border-radius: 50%;
+    color: white;
+  }
+  .sender-avator{
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: fit-content;
+    padding-right: 5px;
+    padding-left: 5px;
+    border-radius: 50%;
+    color: white;
+    right: -10%;
+  }
+  .float-end{
+    float: inline-end;
+  }
+  .fs-15{
+    font-size: 12px;
+    color: #EDFFAB;
+  }
+  .sender span{
+    color: #EDFFAB;
+  }
+</style>
+<body>
+  <div class="chat">
+    <i id="openButton" class="fa-solid fa-message btn-1 fs-20"></i>
+  </div>
+  <div id="targetElement" class="side_bar slideInRight side_bar_hidden p-0">
+      <div class="side_bar_overlay"></div>
+      <div class="p-3 text-white">Chat</div>
+      <div class="overflow sub-bg p-3">
+        <div class="flex mr-3">
+          <h6 class="mr-1 receiver-avator">FD</h6>
+          <div class="chat-msg receiver">df dfd ersf ser efgbvsb dfsfd fdersef<br><span class="float-end fs-15">11:30 pm</span></div>
+        </div>
+        <div class="flex mr-3">
+          <div class="chat-msg sender">df dfd ersf ser efgbvsb dfsfd fdersef<br><span class="float-end fs-15">11:30 pm</span></div>
+          <h6 class="sender-avator">SD</h6>
+        </div>
+        <div class="flex mr-3">
+          <h6 class="mr-1 receiver-avator">FD</h6>
+          <div class="chat-msg receiver">df dfd ersf ser efgbvsb dfsfd fdersef<br><span class="float-end fs-15">11:30 pm</span></div>
+        </div>
+        <div class="flex mr-3">
+          <div class="chat-msg sender">df dfd ersf ser efgbvsb dfsfd fdersef<br><span class="float-end fs-15">11:30 pm</span></div>
+          <h6 class="sender-avator">SD</h6>
+        </div>
+        <div class="flex mr-3">
+          <h6 class="mr-1 receiver-avator">FD</h6>
+          <div class="chat-msg receiver">df dfd ersf ser efgbvsb dfsfd fdersef<br><span class="float-end fs-15">11:30 pm</span></div>
+        </div>
+        <div class="flex mr-3">
+          <div class="chat-msg sender">df dfd ersf ser efgbvsb dfsfd fdersef<br><span class="float-end fs-15">11:30 pm</span></div>
+          <h6 class="sender-avator">SD</h6>
+        </div>
+      </div>
+      <div class="flex p-3 msg">
+        <input type="text">
+        <button class="send sub-bg px-3">Send</button>
+      </div>
+      <button id="closeButton" class="text-white button"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+
+  <!-- Jquery 3 6 0 Min Js -->
+  <script src="assets/js/jquery-3.6.0.min.js"></script>
+  <!-- Swiper bundle min Js -->
+  <script src="assets/js/swiper-bundle.min.js"></script>
+  <!-- Script Js -->
+  <script src="assets/js/script.js"></script>
+</body>
+
+</html>
