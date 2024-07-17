@@ -1054,8 +1054,8 @@ button {
   position: fixed;
   bottom: 10%;
   right: 20px;
-  width: 20%;
-  height: 60%;
+  width: 30%;
+  height: 80%;
   background-color: var(--heading-color);
   padding: 40px;
   padding-top: 65px;
